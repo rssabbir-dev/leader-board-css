@@ -2,11 +2,242 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
 /* Utilities CSS or Gobal CSS Style */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
+    background-color: #E5E5E5;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 870px;
+    background: #ffffff;
+}
+
+.section-title {
+    color: #562EFF;
+}
+
+.author-highlight {
+    color: #562EFF;
+}
+
+section {
+    padding: 30px;
+    border-radius: 5px;
+}
+
+header{
+    background-color:#562EFF;
+    display:flex;
+    justify-content:center;
+    padding:20px 0px;
+    margin-bottom: 30px;
+}
+header .container{
+    background-color:transparent;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap: 20px;
+    font-size:30px;
+    color:#ffffff;
+}
+nav img{
+    height:40px;
+}
+nav ul{
+    display:flex;
+    gap: 25px;
+    align-items: center;
+}
+nav ul li{
+    list-style:none;
+}
+nav ul li a{
+    text-decoration:none;
+    color:white;
+}
+/* Main Section CSS Here */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.top-players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+    margin: 30px 0px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.player img {
+    width: 56px;
+    height: 56px;
+}
+
+.player p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.blog-title {
+    margin: 30px 0px;
+}
+
+.top-blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 13px;
+    grid-row-gap: 13px;
+}
+
+.blog {
+    display: flex;
+    gap: 16px;
+}
+
+.blog>div {
+    flex: 1
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.course-title {
+    margin-bottom: 30px;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 13px;
+}
+
+.course {
+    border: 1px solid rgb(246, 244, 244);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 16px;
+    box-shadow: 0 0 5px 0px lightgrey;
+}
+
+.course-review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating i {
+    color: #FFC014;
+    font-size: 12px;
+}
+
+.dateline {
+    background-color: #FFE4E8;
+    color: #FF4A60;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.course-creator {
+    font-size: 14px;
+    color: #FF4A60;
+}
+
+@media (max-width:576px) {
+    nav a {
+        display: none;
+    }
+    .container {
+        width: 90%;
+    }
+
+    .top-players {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .top-blog {
+        grid-template-columns: 1fr;
+        grid-row-gap: 13px;
+    }
+
+    .courses {
+        grid-template-columns: 1fr;
+        grid-row-gap: 13px;
+    }
+}
+
+@media (min-width:577px) and (max-width:768px) {
+    .container {
+        width: 90%;
+    }
+
+    .top-players {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .top-blog {
+        grid-template-columns: 1fr;
+        grid-row-gap: 13px;
+    }
+
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 13px;
+    }
+}
+
+@media (min-width:769px) and (max-width:992px) {
+    .container {
+        width: 90%
+    }
+
+    .top-players {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .top-blog {
+        grid-template-columns: 1fr;
+        grid-row-gap: 13px;
+    }
+    .blog{
+        width: 70%
+    }
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 13px;
+    }
 }
